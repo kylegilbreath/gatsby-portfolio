@@ -51,6 +51,12 @@ const ProjectCardContainer = styled(Link)`
             opacity: 0.2;
             transition: all 150ms ease-in-out;
         }
+
+        .ProjectCardImageContainer {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+            transition: all 150ms ease-in-out;
+        }
     }
 `
 
@@ -66,7 +72,7 @@ const ProjectCardContent = styled("div")`
         height: 100%;
         left: 0;
         top: 0;
-        background: ${colors.blue500};
+        background: ${colors.grey900};
         mix-blend-mode: multiply;
         opacity: 0;
         transition: all 150ms ease-in-out;
@@ -119,14 +125,14 @@ const ProjectCardImageContainer = styled("div")`
     background: ${colors.grey200};
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     overflow: hidden;
     position: relative;
-    padding-left: 2em;
-    padding-right: 2em;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: transform 400ms ease-in-out;
 
     @media(max-width:${dimensions.maxwidthTablet}px) {
-        padding-top: 3em;
         max-height: 200px;
         flex-direction: column;
         align-items: center;
@@ -147,13 +153,10 @@ const ProjectCardImageContainer = styled("div")`
     }
 
     img {
-        max-width: 400px;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.04);
-
-        @media(max-width:${dimensions.maxwidthTablet}px) {
-            max-width: 300px;
-        }
     }
 `
 

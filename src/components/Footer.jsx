@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import Logo from "components/_ui/Logo";
-import spooch from "images/oscar-icon.png"
+import taco from "images/taco.png"
 
 const FooterContainer = styled("div")`
     padding-top: 3.75em;
@@ -29,7 +29,7 @@ const FooterAuthor = styled("a")`
      &:hover {
          color: ${colors.blue900};
 
-        .FooterSpooch {
+        .FooterTaco {
             animation-name: rotate;
             animation-duration: 1.5s;
             animation-iteration-count: infinite;
@@ -43,7 +43,7 @@ const FooterAuthor = styled("a")`
     }
 `
 
-const FooterSpooch = styled("img")`
+const FooterTaco = styled("img")`
     max-width: 33px;
     margin-top: 0.25em;
 `
@@ -53,9 +53,9 @@ const Footer = () => (
         <Link to="/">
             <Logo />
         </Link>
-        <FooterAuthor href="https://marguerite.io">
-            © 2019 — Designed & developed by Marguerite Roth
-            <FooterSpooch className="FooterSpooch" src={spooch} />
+        <FooterAuthor href="">
+            © 2019 — Live each day like it’s Taco Tuesday.
+            <FooterTaco className="FooterTaco" src={taco} />
         </FooterAuthor>
     </FooterContainer>
 )
