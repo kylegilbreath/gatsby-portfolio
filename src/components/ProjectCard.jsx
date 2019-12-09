@@ -53,8 +53,6 @@ const ProjectCardContainer = styled(Link)`
         }
 
         .ProjectCardImageContainer {
-            -webkit-filter: grayscale(0);
-            filter: grayscale(0);
             transition: all 150ms ease-in-out;
         }
     }
@@ -128,8 +126,6 @@ const ProjectCardImageContainer = styled("div")`
     align-items: center;
     overflow: hidden;
     position: relative;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
     transition: transform 400ms ease-in-out;
 
     @media(max-width:${dimensions.maxwidthTablet}px) {
@@ -146,7 +142,7 @@ const ProjectCardImageContainer = styled("div")`
         height: 100%;
         left: 0;
         top: 0;
-        background: ${colors.blue500};
+        background: ${colors.grey900};
         mix-blend-mode: multiply;
         opacity: 0;
         transition: all 150ms ease-in-out;

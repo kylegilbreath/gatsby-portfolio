@@ -12,6 +12,10 @@ const FooterContainer = styled("div")`
     flex-direction: column;
     align-items: center;
 
+    a {
+        text-decoration: none;
+    }
+
     svg {
         max-width: 50px;
     }
