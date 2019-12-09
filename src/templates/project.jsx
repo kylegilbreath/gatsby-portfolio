@@ -15,27 +15,31 @@ const ProjectHeroContainer = styled("div")`
     align-items: flex-end;
     overflow: hidden;
     position: relative;
-    padding-top: 2.25em;
     margin-bottom: 3.5em;
+    max-height: 420px;
 
     img {
-        max-width: 600px;
+        object-fit: cover;
+        width: 100%;
     }
 `
 
 const ProjectTitle = styled("div") `
-    max-width: 550px;
+    max-width: 680px;
     margin: 0 auto;
-    text-align: center;
 `
 
 const ProjectBody = styled("div")`
-    max-width: 550px;
-    margin: 0 auto;
+
+    p {
+        max-width: 680px;
+        margin: 0 auto;
+    }
 
     .block-img {
         margin-top: 3.5em;
-        margin-bottom: 0.5em;
+        margin-bottom: 2.5em;
+        max-width: 100%;
 
         img {
             width: 100%;
@@ -92,15 +96,15 @@ const Project = ({ project, meta }) => {
                 ].concat(meta)}
             />
             <Layout>
-                <ProjectTitle>
-                    {RichText.render(project.project_title)}
-                </ProjectTitle>
                 {project.project_hero_image && (
                     <ProjectHeroContainer>
                         <img src={project.project_hero_image.url} alt="bees" />
                     </ProjectHeroContainer>
                 )}
                 <ProjectBody>
+                    <ProjectTitle>
+                        {RichText.render(project.project_title)}
+                    </ProjectTitle>
                     {RichText.render(project.project_description)}
                     <WorkLink to={"/work"}>
                         <Button className="Button--secondary">
