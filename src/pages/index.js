@@ -47,6 +47,11 @@ const Hero = styled("div")`
             }
         }
     }
+
+    a {
+        text-decoration: none;
+        color: ${colors.grey900}; 
+    }
 `
 
 const Section = styled("div")`
@@ -82,7 +87,37 @@ const WorkAction = styled(Link)`
     }
 
     &:hover {
-        color: ${colors.blue500};
+        color: ${colors.orange500};
+        transition: all 150ms ease-in-out;
+
+        span {
+            transform: translateX(0px);
+            opacity: 1;
+            transition: transform 150ms ease-in-out;
+        }
+    }
+`
+
+const HeroLink = styled("a")`
+    font-weight: 600;
+    text-decoration: none;
+    color: currentColor;
+    transition: all 150ms ease-in-out;
+    margin-left: auto;
+
+    @media(max-width:${dimensions.maxwidthTablet}px) {
+       margin: 0 auto;
+    }
+
+    span {
+        margin-left: 1em;
+        transform: translateX(-8px);
+        display: inline-block;
+        transition: transform 400ms ease-in-out;
+    }
+
+    &:hover {
+        color: ${colors.orange500};
         transition: all 150ms ease-in-out;
 
         span {
@@ -137,11 +172,12 @@ const RenderBody = ({ home, projects, meta }) => (
             <>
                 {RichText.render(home.hero_title)}
             </>
+            Currently working at&nbsp;
             <a href={home.hero_button_link.url}
                target="_blank" rel="noopener noreferrer">
-                <Button>
-                    {RichText.render(home.hero_button_text)}
-                </Button>
+                <HeroLink href={home.hero_button_link.url} target="_blank">
+                    Twilio <span>&#8594;</span>
+                </HeroLink>
             </a>
         </Hero>
         <Section>
