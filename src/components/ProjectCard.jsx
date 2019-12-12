@@ -32,7 +32,7 @@ const ProjectCardContainer = styled(Link)`
         transition: all 150ms ease-in-out;
 
         .ProjectCardAction {
-            color: ${colors.blue500};
+            color: white;
             transition: all 150ms ease-in-out;
 
             span {
@@ -42,18 +42,22 @@ const ProjectCardContainer = styled(Link)`
             }
         }
 
-        .ProjectCardContent::before {
-            opacity: 0.02;
+        .ProjectCardContent {
+            background-color: black;
+            color: white;
             transition: all 150ms ease-in-out;
         }
 
         .ProjectCardImageContainer::before {
-            opacity: 0.2;
-            transition: all 150ms ease-in-out;
+
         }
 
         .ProjectCardImageContainer {
-            transition: all 150ms ease-in-out;
+            transition: all 300ms ease-in-out;
+
+            img {
+                filter: hue-rotate(90deg);
+            }
         }
     }
 `
@@ -62,6 +66,7 @@ const ProjectCardContent = styled("div")`
     background: white;
     padding: 4em 3em 2.25em 3em;
     position: relative;
+    transition: all 150ms ease-in-out;
 
     &:before {
         position: absolute;
