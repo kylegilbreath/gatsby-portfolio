@@ -51,6 +51,10 @@ const ProjectBody = styled("div")`
     h2 {
         margin-top: 3.5rem;
     }
+
+    h3 {
+        margin-top: 2.5rem;
+    }
 `
 
 const WorkLink = styled(Link)`
