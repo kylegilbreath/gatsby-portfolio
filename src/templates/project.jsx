@@ -43,6 +43,10 @@ const ProjectBody = styled("div")`
             width: 100%;
         }
     }
+
+    li {
+        margin-bottom: 1rem;
+    }
 `
 
 const WorkLink = styled(Link)`
