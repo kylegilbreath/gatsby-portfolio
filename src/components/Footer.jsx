@@ -58,7 +58,7 @@ const Footer = () => (
             <Logo />
         </Link>
         <FooterAuthor href="">
-            © 2019 — Live each day like it’s Taco Tuesday.
+            © 2020 — Live each day like it’s Taco Tuesday.
             <FooterTaco className="FooterTaco" src={taco} />
         </FooterAuthor>
     </FooterContainer>

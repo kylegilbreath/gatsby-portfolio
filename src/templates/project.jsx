@@ -25,16 +25,14 @@ const ProjectHeroContainer = styled("div")`
 `
 
 const ProjectTitle = styled("div") `
-    max-width: 680px;
+    max-width: 720px;
     margin: 0 auto;
 `
 
 const ProjectBody = styled("div")`
 
-    p {
-        max-width: 680px;
-        margin: 0 auto;
-    }
+    max-width: 720px;
+    margin: 0 auto;
 
     .block-img {
         margin-top: 3.5em;
